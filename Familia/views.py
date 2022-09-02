@@ -17,7 +17,7 @@ def hermano(request):
     contexto = {
         'hermano': miHermano
     }
-    return render(request,'familia.html', contexto)
+    return render(request,'hermano.html', contexto)
 
 def sobrino(request):
     miSobrino = Sobrino(nombre="Valentino", edad=16)
@@ -25,7 +25,7 @@ def sobrino(request):
     contexto = {
         'sobrino': miSobrino
     }
-    return render(request,'familia.html', contexto)
+    return render(request,'sobrino.html', contexto)
 
 def sobrina(request):
     miSobrina = Sobrina(nombre="Uma", edad=7)
@@ -33,15 +33,8 @@ def sobrina(request):
     contexto = {
         'sobrina': miSobrina
     }
-    return render(request,'familia.html', contexto)
+    return render(request,'sobrina.html', contexto)
 
-def mascota(request):
-    miMascota = Mascota(nombre="Saoko", comidaFav="Atún")
-    miMascota.save()
-    contexto = {
-        'mascota': miMascota
-    }
-    return render(request, 'familia.html', contexto)
 
 
 
